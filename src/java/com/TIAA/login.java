@@ -49,7 +49,7 @@ public class login extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>TIAA Login</h1>");
-            out.println("<form action='/Portal/authenticator'>"
+            out.println("<form action='/Portal/authenticator' method ='post'>"
                     + "  <div style='padding:30px'>"
                     + "  <label>Username</label>"
                     + "  <input type='text' size='30' name='username'/>"

@@ -30,6 +30,8 @@ public class authenticator extends HttpServlet {
                 if (username != null && password != null
                         && username.equals("tom") && password.equals("cat")) {
                     session.setAttribute("username", username);
+                    request.setAttribute("userRole", request.isUserInRole("admin")); 
+                    //request.setAttribute("userRole","admin");
                     String redirect = (String) session.getAttribute("redirect");
                     if (redirect != null) {
                         session.removeAttribute("redirect");
